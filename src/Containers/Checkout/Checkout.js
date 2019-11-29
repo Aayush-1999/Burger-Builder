@@ -1,7 +1,11 @@
 import React, {Component} from 'react';
 
 class Checkout extends Component{
-    render
+    render(){
+        return(
+            
+        )
+    }
 }
 
 export default Checkout;
