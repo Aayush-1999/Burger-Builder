@@ -17,16 +17,15 @@ class ContactData extends Component{
 
     orderHandler=(event)=>{
         event.preventDefault();
-        console.log(this.props.ingredients);
         this.setState({loading:true});
         const order={
             ingredients:this.props.ingredients,
-            price:this.props.totalPrice,
+            price:this.props.price,
             customer:{
                 name:'Aayush',
                 address:{
                     street:'XYZ',
-                    zipcode:'110059',
+                    zipcode:'12345',
                     country:'India'   
                     },
                 email:'abc@gmail.com',
