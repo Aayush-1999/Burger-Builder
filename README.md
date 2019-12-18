@@ -1,14 +1,14 @@
-#Burger-Builder
+# Burger-Builder
 
-a><img alt="Code Quality" src="https://img.shields.io/badge/code%20quality-A-brightgreen"></a>
+<a><img alt="Code Quality" src="https://img.shields.io/badge/code%20quality-A-brightgreen"></a>
 <a><img alt="Dependanices upto date" src="https://img.shields.io/david/Aayush-1999/Blogrite?label=dependencies"></a>
 
-This is a burger building react app where a user can:
+This is a **burger building react app** where a user can:
 - create a burger of his choice
 - Fill contact details
 - place multiple orders at a time
 
-This project uses Firebase for database.
+This project uses **Firebase** for database.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
