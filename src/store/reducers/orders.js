@@ -26,6 +26,7 @@ const reducer=(state=initialState,action)=>{
             return{
                 ...state,  
                 loading:false,
+                error:null,
                 purchased:true,
                 orders:state.orders.concat(newOrder)
             };

@@ -3,7 +3,8 @@ import * as actionTypes from '../actions/actionTypes';
 const initialStore={
     ingredients:null,
     error:false,
-    totalPrice:20
+    totalPrice:20,
+    building:false
 };
 
 const INGREDIENTS_PRICE={
@@ -22,6 +23,7 @@ const reducer=(state=initialStore,action)=>{
                     ...state.ingredients,
                     [action.ingredientName]:state.ingredients[action.ingredientName]+1
                 },
+                building:true,
                 totalPrice:state.totalPrice + INGREDIENTS_PRICE[action.ingredientName]
             };
         case actionTypes.REMOVE_INGREDIENT:
@@ -31,6 +33,7 @@ const reducer=(state=initialStore,action)=>{
                     ...state.ingredients,
                     [action.ingredientName]:state.ingredients[action.ingredientName]-1
                 },
+                building:true,
                 totalPrice:state.totalPrice - INGREDIENTS_PRICE[action.ingredientName]
             };
         case actionTypes.SET_INGREDIENT:
@@ -38,6 +41,7 @@ const reducer=(state=initialStore,action)=>{
                 ...state,
                 ingredients:action.ingredients,
                 totalPrice:20,
+                building:false,
                 error:false
             };
         case actionTypes.FETCH_INGREDIENT_FAILED:
