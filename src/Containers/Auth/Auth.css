@@ -1,0 +1,23 @@
+.AuthData{
+    margin: 20px auto;
+    text-align: center;
+    width: 80%;
+    padding:10px;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+}
+
+.errorMessage{
+    color: red;
+    padding: 10px;
+    font-size: 0.875rem;
+    margin: 0;
+    text-align: left;
+}
+
+@media(min-width:500px){
+    .AuthData{
+        width: 500px;
+    }
+}
