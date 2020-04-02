@@ -2,10 +2,14 @@ import React from 'react';
 import classes from './NavigationItems.css';
 import Navigationitem from './NavigationItem/NavigationItem';
 
-const navigationItems=()=>(
+const navigationItems=(props)=>(
     <ul className={classes.NavigationItems}>
         <Navigationitem link="/" exact >Burger Builder</Navigationitem>
-        <Navigationitem link="/orders" >Orders</Navigationitem>
+        {props.isAuthenticated?<Navigationitem link="/orders" >Orders</Navigationitem>:null}
+        { !props.isAuthenticated?
+            <Navigationitem link="/auth" exact >Authenticate</Navigationitem>
+            :<Navigationitem link="/logout" exact >Logout</Navigationitem>
+        }
     </ul>
 )
 
