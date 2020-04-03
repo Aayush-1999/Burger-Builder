@@ -4,9 +4,10 @@
 <a><img alt="Dependanices upto date" src="https://img.shields.io/david/Aayush-1999/Blogrite?label=dependencies"></a>
 
 This is a **burger building react app** where a user can:
-- create a burger of his choice
-- Fill contact details
-- place multiple orders at a time
+- Authenticate or Register
+- Create a burger of his choice
+- Order a burger by filling contact details
+- View all orders
 
 This project uses **Firebase** for database.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
