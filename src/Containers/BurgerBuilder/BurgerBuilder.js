@@ -16,7 +16,9 @@ class BurgerBuilder extends Component{
     }
 
     componentDidMount(){
-        this.props.onInitIngredients();
+        if(!this.props.burgerBuilding || this.props.purchased){
+            this.props.onInitIngredients();
+        }
     }
 
     updatePurchaseState=(ingredients)=>{
@@ -98,7 +100,9 @@ const mapStateToProps=state=>{
         ings:state.burgerBuilder.ingredients,
         price:state.burgerBuilder.totalPrice,
         error:state.burgerBuilder.error,
-        isAuthenticated:state.auth.token!==null
+        isAuthenticated:state.auth.token!==null,
+        burgerBuilding:state.burgerBuilder.building,
+        purchased:state.order.purchased
     };
 }
 
